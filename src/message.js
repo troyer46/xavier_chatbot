@@ -44,6 +44,7 @@ const replyMessage = (message) => {
     message.reply()
     .then(() => {
       // Do some code after sending messages
+      console.log("hello JAKE, i've sent all replies")
     })
     .catch(err => {
       console.error('Error while sending message to channel', err)
