@@ -27,6 +27,7 @@ const replyMessage = (message) => {
     * Or: Update your mongo DB
     * etc...
     */
+      
     if (result.action) {
       console.log('The conversation action is: ', result.action.slug)
     }
@@ -36,8 +37,8 @@ const replyMessage = (message) => {
       message.addReply({ type: 'text', content: 'I don\'t have the reply to this yet :)' })
     } else {
       // Add each reply received from API to replies stack
-      result.replies.forEach(replyContent => message.addReply({ type: 'text', content: replyContent }))
-    }
+      result.replies.forEach(replyContent => message.addReply({ type: 'text', content: replyContent+" party " }))
+    } 
 
     // Send all replies
     message.reply()
